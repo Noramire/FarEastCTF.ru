@@ -8,7 +8,7 @@ db.settings.findOne({}, (error, post) => {
       site: {
         title: { 'ru-RU': 'FarEastCTF', 'en-US': 'FarEastCTF' },
         description: { 'ru-RU': 'FarEastCTF', 'en-US': 'FarEastCTF' },
-        url: 'http://localhost:3000',
+        url: process.env.NODE_HOST ?? 'http://localhost:3000', // 'http://localhost:3000'
       },
       posts: {
         postsPerPage: 10,
