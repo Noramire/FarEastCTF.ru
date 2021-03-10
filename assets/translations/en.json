@@ -1,0 +1,75 @@
+{
+  "head": {
+    "title": {
+      "home": "The First CTF on Far East",
+      "posts": "Blog",
+      "sponsors": "Sponsors",
+      "about_us": "About",
+      "logo": "FarEastCTF."
+    },
+    "navigation": {
+      "home": "Home",
+      "about_us": "About",
+      "sponsors": "Sponsors",
+      "hackers_school": "Hacker's School",
+      "blog": "Blog"
+    }
+  },
+  "footer": {
+    "on_top": "🎉 Scroll top 🎉"
+  },
+  "pages": {
+    "home": {
+      "who_we_are": "Who we are?",
+      "logo": "FarEastCTF.",
+      "description": "We are hosting huge CTF competitions.",
+      "more": "More",
+      "all_posts": "All posts",
+      "socials": "Socials:",
+      "vkontakte": "VKontakte",
+      "telegram": "Telegram",
+      "instagram": "Instagram"
+    },
+    "about": {
+      "about_us": "About us",
+      "title": "The first on the far east!",
+      "description": "Our team runs Capture The Flag (CTF) cybersecurity championships. Each of us puts all our efforts into the development of thematic competitions.",
+      "open_gallery": "Open a gallery"
+    },
+    "sponsors": {
+      "sponsors": "Sponsors",
+      "title": "We are supported by.",
+      "description": "Rostelecom Solar is our main sponsor, thanks to which we can host computer security competitions.",
+      "know_more": "Let's know more",
+      "title_page": "Спонсоры.",
+      "title_sponsors": "We are sponsored by.",
+      "title_smi": "We are supported in media by.",
+      "description_sponsors": "Our competitions could not have taken place without the following sponsors.",
+      "description_smi": "Thousands of people will know about our CTF competitions through the following organizations."
+    },
+    "write_us": {
+      "title": "Email us!",
+      "description": "If you are interested in our activity or want to talk about something, we will always be glad to receive your mails!",
+      "write": "Write email"
+    },
+    "blog": {
+      "title": "Blog.",
+      "description": "Our news and other information.",
+      "next": "More.",
+      "load_more": "Load more posts",
+      "no_more_posts": "No more posts."
+    },
+    "post": {
+      "more_posts": "More posts."
+    },
+    "about_us": {
+      "status": "Who we are?",
+      "title_page": "About Us.",
+      "title": "FarEastCTF.",
+      "description": "We are the creators and organizers of the largest CTF championships in the Far East. We have already successfully held several championships in online and offline formats.",
+      "b_status": "What we can do?",
+      "b_title": "Capture The Flag.",
+      "b_description": "Our team organizes large-scale CTF competitions. We are committed to promoting information security, as well as allowing people of all ages to feel the spirit of solidarity, fighting with rivals for the right to win prizes."
+    }
+  }
+}

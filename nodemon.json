@@ -1,0 +1,8 @@
+{
+  "watch": [
+    "app/server",
+    "app/abstract"
+  ],
+  "ext": "js, jsx, ts, tsx",
+  "exec": "npx tsc --p tsconfig.server.json & node .build/server.js"
+}
