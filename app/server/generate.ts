@@ -31,21 +31,21 @@ db.settings.findOne({}, (error, post) => {
         { title: { 'ru-RU': 'Главная', 'en-US': 'Home' }, url: '/' },
         { title: { 'ru-RU': 'О нас', 'en-US': 'About' }, url: '/about' },
         { title: { 'ru-RU': 'Спонсоры', 'en-US': 'Sponsors' }, url: '/sponsors' },
-        { title: { 'ru-RU': 'Блог', 'en-US': 'Blog' }, url: '/posts' },
+        { title: { 'ru-RU': 'Новости', 'en-US': 'News' }, url: '/posts' },
       ],
       slides: [{ id: '' }, { id: '' }],
       socials: [
         {
           title: { 'ru-RU': 'Телеграм', 'en-US': 'Telegram' },
-          url: '/',
+          url: 'https://t.me/FarEastCTF',
         },
         {
           title: { 'ru-RU': 'ВКонтакте', 'en-US': 'VKontakte' },
-          url: '/',
+          url: 'https://vk.com/fareastctf',
         },
         {
           title: { 'ru-RU': 'Инстаграм', 'en-US': 'Instagram' },
-          url: '/',
+          url: 'https://www.instagram.com/fareastctf/',
         },
       ],
       sponsors: {

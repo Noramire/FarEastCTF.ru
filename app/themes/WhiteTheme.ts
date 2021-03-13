@@ -1,5 +1,6 @@
 const Colors = {
   gray100: '#f8f9fa',
+  gray150: '#f2f2f2',
   gray200: '#e9ecef',
   gray300: '#dee2e6',
   gray400: '#ced4da',
@@ -35,6 +36,7 @@ const WhiteTheme = {
     dark: '#131313',
 
     border: Colors.gray300, // '#e6e6e6',
+    borderLight: Colors.gray150, // '#e6e6e6',
   },
   transitions: {
     button: (duration: number = 0.2) => `${duration}s cubic-bezier(0,1, .43, .86)`,

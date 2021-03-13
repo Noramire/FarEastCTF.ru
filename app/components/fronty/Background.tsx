@@ -7,7 +7,7 @@ import Column from '../basis/Column';
 type BackgroundProps = HTMLAttributes<HTMLDivElement>;
 
 const BackgroundColumn = styled(Column)`
-  border-right: 1px solid ${({ theme: { colors } }) => (colors.border)};
+  border-right: 1px solid ${({ theme: { colors } }) => (colors.borderLight)};
 `;
 
 const Background = ({

@@ -178,6 +178,10 @@ const SectionLanding = ({
                   background: ${colors.primary};
                   display: flex;
                   justify-content: center;
+
+                  ${mediaQueries.sm(`
+                    margin-top: -80px;
+                  `)}
                 `}
               >
                 <motion.div
@@ -189,6 +193,10 @@ const SectionLanding = ({
                     border-radius: 30px;
                     display: flex;
                     justify-content: center;
+
+                    ${mediaQueries.sm(`
+                      border-radius: 5px;
+                    `)}
                   `}
                   initial={{ y: -30, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
@@ -212,6 +220,13 @@ const SectionLanding = ({
                   display: flex;
                   align-self: center;
                   padding: 0 50px;
+
+                  ${mediaQueries.sm(`
+                    margin-left: -80px;
+                    padding: 0;
+                    width: 100%;
+                    justify-content: center;
+                  `)}
                 `}
               >
                 <motion.div
@@ -362,7 +377,14 @@ const SectionLanding = ({
               </Slick>
             </div>
             <div className="s-landing-slider__background">
-              <div className="s-landing-slider__background-col s-landing-slider__loader">
+              <div
+                className="s-landing-slider__background-col s-landing-slider__loader"
+                css={css`
+                  ${mediaQueries.sm(`
+                    width: 50% !important;
+                  `)}
+                `}
+              >
                 <motion.span
                   className="s-landing-slider__loader-sign"
                   initial="exit"
@@ -401,10 +423,19 @@ const SectionLanding = ({
               <div
                 className="s-landing-slider__background-col"
                 css={css`
-                  
+                  ${mediaQueries.sm(`
+                    display: none !important;
+                  `)}
                 `}
               />
-              <div className="s-landing-slider__background-col">
+              <div
+                className="s-landing-slider__background-col"
+                css={css`
+                  ${mediaQueries.sm(`
+                    width: 50% !important;
+                  `)}
+                `}
+              >
                 <Button
                   href="/posts"
                   css={css`

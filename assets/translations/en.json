@@ -38,10 +38,10 @@
     },
     "sponsors": {
       "sponsors": "Sponsors",
-      "title": "We are supported by.",
+      "title": "We are supported by",
       "description": "Rostelecom Solar is our main sponsor, thanks to which we can host computer security competitions.",
       "know_more": "Let's know more",
-      "title_page": "Спонсоры.",
+      "title_page": "Sponsors",
       "title_sponsors": "We are sponsored by.",
       "title_smi": "We are supported in media by.",
       "description_sponsors": "Our competitions could not have taken place without the following sponsors.",
@@ -53,7 +53,7 @@
       "write": "Write email"
     },
     "blog": {
-      "title": "Blog.",
+      "title": "News",
       "description": "Our news and other information.",
       "next": "More.",
       "load_more": "Load more posts",
@@ -64,7 +64,7 @@
     },
     "about_us": {
       "status": "Who we are?",
-      "title_page": "About Us.",
+      "title_page": "About Us",
       "title": "FarEastCTF.",
       "description": "We are the creators and organizers of the largest CTF championships in the Far East. We have already successfully held several championships in online and offline formats.",
       "b_status": "What we can do?",

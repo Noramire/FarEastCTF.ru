@@ -91,6 +91,7 @@ const SectionAbout = ({ landingImage, ...props }: SectionAboutProps) => {
                 <Typography
                   as="p"
                   fontSize="30px"
+                  fontSizeSm="25px"
                 >
                   {i18n.t('pages.about.description')}
                 </Typography>

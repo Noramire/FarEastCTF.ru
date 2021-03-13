@@ -119,7 +119,6 @@ const Page: NextPage<PageProps> = ({ settings }) => {
               </Typography>
             </MotionInView>
             <MotionInView
-              as="p"
               variants={variants}
               initial="initial"
               startAnimation="visible"
@@ -149,25 +148,25 @@ const Page: NextPage<PageProps> = ({ settings }) => {
                         grid-row: span 1 !important;
                       `)}
 
-                      &:nth-child(3n - 2) {
+                      &:nth-of-type(3n - 2) {
                         height: 40vw;
                         grid-row: span 2;
                         grid-column: span 3;
                       }
                   
-                      &:nth-child(6n - 2) {
+                      &:nth-of-type(6n - 2) {
                         height: 20vw;
                         grid-row: span 1;
                         grid-column: span 2;
                       }
                   
-                      &:nth-child(6n - 1) {
+                      &:nth-of-type(6n - 1) {
                         height: 40vw;
                         grid-row: span 2;
                         grid-column: span 3;
                       }
                   
-                      &:nth-child(6n) {
+                      &:nth-of-type(6n) {
                         height: 20vw;
                         grid-row: span 1;
                         grid-column: span 2;
@@ -239,7 +238,6 @@ const Page: NextPage<PageProps> = ({ settings }) => {
                 </Typography>
               </MotionInView>
               <MotionInView
-                as="p"
                 variants={variants}
                 initial="initial"
                 startAnimation="visible"

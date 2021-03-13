@@ -124,7 +124,7 @@ const Page: NextPage<PageProps> = ({
               }
               
               hr {
-                border: 1px solid $regular-border;
+                border: 1px solid ${colors.mono};
                 margin: 1rem 0 calc(1rem + 5px);
               }
               
@@ -145,7 +145,7 @@ const Page: NextPage<PageProps> = ({
               }
 
               a {
-                color: $regular-accent;
+                color: ${colors.primary};
               }
             `}
             // eslint-disable-next-line react/no-danger

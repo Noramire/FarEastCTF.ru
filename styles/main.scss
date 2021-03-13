@@ -1,6 +1,178 @@
 // Utils
-@import "utils/colors";
-@import "utils/variables";
 
-// Page Sections
-@import "sections/index";
+$header-height: 106px;
+$brand-status-height: 80px;
+$regular-text: #000F08;
+$regular-accent:  #EC4067;
+$regular-snowy: #FFF9FB;
+$regular-mono: #818181;
+$regular-border: #e6e6e6;
+
+.s-landing-slider {
+  .s-landing-slider__wrapper {
+    height: calc(100% - 80px);
+    width: calc(100% - 137px);
+  }
+
+  .s-landing-slider__indexer {
+    position: absolute;
+    z-index: 1;
+    right: 200px;
+    top: 50px;
+    width: 50px; height: 50px;
+    border: 1px solid $regular-snowy;
+    display: flex;
+
+    .s-landing-slider__indexer-text {
+      align-self: center;
+      text-align: center;
+      width: 100%;
+      line-height: 1;
+      color: $regular-snowy;
+      margin-top: -4px;
+      font-family: 'RalewayBold';
+      font-size: 20px;
+    }
+  }
+
+  .s-landing-slider__background {
+    width: 100%; height: $brand-status-height;
+    display: flex;
+
+    .s-landing-slider__background-col {
+      border-right: 1px solid $regular-border;
+      height: 100%;
+      width: 33.33%;
+
+      display: flex;
+      justify-content: center;
+
+      &:last-child {
+        border-right: none;
+      }
+
+      &.s-landing-slider__loader {
+        display: flex;
+        align-self: center;
+    
+        .s-landing-slider__loader-sign {
+          align-self: center;
+          text-transform: uppercase;
+          margin: 10px;
+          font-family: 'RalewayBold';
+          font-size: 15px;
+        }
+    
+        .s-landing-slider__loader {
+          display: block;
+          align-self: center;
+          background: $regular-mono;
+          height: 4px; width: 20%;
+      
+          .s-landing-slider__loader-value {
+            display: block;
+            background: $regular-text;
+            height: 4px; width: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .s-landing-slider__item {
+    overflow: hidden;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    cursor: grab;
+    background: black;
+
+    &:active {
+      cursor: grabbing;
+    }
+
+    &:hover {
+      .s-landing-slider__title, .s-landing-slider__description, .s-landing-slider__more {
+        transform: translateX(20px);
+      }
+    }
+  }
+
+  .s-landing-slider__info {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    z-index: 1;
+    color: $regular-snowy;
+
+    .s-landing-slider__title, .s-landing-slider__description {
+      display: block;
+    }
+
+    .s-landing-slider__title {
+      font-family: 'RalewayBold';
+      font-size: 30px;
+      margin-bottom: 10px;
+      transition: transform 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    .s-landing-slider__description {
+      font-weight: 400;
+      font-size: 22px;
+      width: 250px;
+      margin-bottom: 30px;
+      transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    .s-landing-slider__more {
+      display: flex;
+      font-family: 'RalewayBold';
+      font-size: 15px;
+      color: $regular-snowy;
+      text-decoration: none;
+      opacity: 0.8;
+      transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1), opacity 0.5s ease;
+
+      &:hover {
+        opacity: 1;
+
+        .s-landing-slider__more-text {
+          transform: translateX(5px);
+        }
+
+        .s-landing-slider__more-line {
+          width: 40px;
+        }
+      }
+
+      .s-landing-slider__more-text {
+        margin-right: 20px;
+        transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+
+      .s-landing-slider__more-line {
+        align-self: center;
+        border: 1px solid $regular-border;
+        width: 30px;
+        transition: width 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+    }
+  }
+}
+
+.s-landing-slick {
+  height: 100%;
+
+  .slick-list, .slick-track, .slick-slide, .slick-slide>div, .slick-slide {
+    height: 100%;
+  }
+
+  .slick-list {
+    overflow: hidden;
+  }
+
+  .slick-track {
+    display: flex;
+  }
+}

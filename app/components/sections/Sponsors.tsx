@@ -206,7 +206,7 @@ const SectionSponsors = ({ sponsors, landingImage, ...props }: SectionSponsorsPr
                   <Typography
                     as="p"
                     fontSize="30px"
-                    fontSizeXl="25px"
+                    fontSizeMd="25px"
                   >
                     {i18n.t('pages.sponsors.description')}
                   </Typography>

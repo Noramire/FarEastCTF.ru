@@ -124,7 +124,6 @@ const Page: NextPage<PageProps> = ({ settings }) => {
               </Typography>
             </MotionInView>
             <MotionInView
-              as="p"
               variants={variants}
               initial="initial"
               startAnimation="visible"
@@ -185,7 +184,6 @@ const Page: NextPage<PageProps> = ({ settings }) => {
               </Typography>
             </MotionInView>
             <MotionInView
-              as="p"
               variants={variants}
               initial="initial"
               startAnimation="visible"
