@@ -24,6 +24,7 @@ const {
   Square,
   Grid,
   Column,
+  Meta,
 } = Basis;
 
 const { MotionInView } = Utils;
@@ -95,6 +96,7 @@ export const SponsorLink = ({ sponsor, style, styleAnchor }: SponsorLinkProps) =
 
 const Page: NextPage<PageProps> = ({ settings }) => {
   const i18n = useContext(IntContext);
+  const locale = i18n.locale();
 
   const mainSponsors = useMemo(() => settings.sponsors.list.filter((sponsor) => sponsor.main), []);
   const etcSponsors = useMemo(() => settings.sponsors.list.filter((sponsor) => !sponsor.main), []);
@@ -103,6 +105,15 @@ const Page: NextPage<PageProps> = ({ settings }) => {
     <>
       <Head>
         <title>{`${settings.site.title['ru-RU']} | ${i18n.t('head.title.sponsors')}`}</title>
+        <Meta
+          title={`${settings.site.title['ru-RU']} | ${i18n.t('head.title.sponsors')}`}
+          description={i18n.t('pages.sponsors.description')}
+          locale={locale}
+          image={settings.sponsors.landingImage.image}
+          url={new URL('/sponsors', settings.site.url).toString()}
+          icon={settings.site.icon}
+          type="website"
+        />
       </Head>
       <Header navigationLinks={settings.navigationLinks} />
       <Title>{i18n.t('pages.sponsors.title_page')}</Title>

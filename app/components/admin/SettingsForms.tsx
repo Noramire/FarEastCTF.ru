@@ -12,6 +12,7 @@ import {
   ArrayInput,
   SimpleFormIterator,
   BooleanInput,
+  ImageField,
 } from 'react-admin';
 import { Typography } from '@material-ui/core';
 
@@ -25,6 +26,8 @@ const SettingsEdit = (props) => (
         <TextInput source="site.title" label="Название сайта" fullWidth />
         <TextInput source="site.description" label="Описание сайта" fullWidth />
       </TranslatableInputs>
+      <TextInput source="site.icon" label="Иконка сайта" fullWidth />
+      <ImageField source="site.icon" label="Первью изображения" />
       <ArrayInput source="navigationLinks" label="Навигационное меню">
         <SimpleFormIterator>
           <TextInput source="title.ru-RU" label="Текст (рус.)" />

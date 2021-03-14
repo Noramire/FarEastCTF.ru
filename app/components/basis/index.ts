@@ -8,6 +8,7 @@ import Linkp from './Linkp';
 import Card from './Card';
 import Typography from './Typography';
 import Button from './Button';
+import Meta from './Meta';
 
 export {
   Grid,
@@ -20,4 +21,5 @@ export {
   Button,
   Card,
   Typography,
+  Meta,
 };

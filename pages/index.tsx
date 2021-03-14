@@ -8,9 +8,12 @@ import IntContext from '../app/context/Internalization';
 import { MyRequest } from '../app/abstract/request';
 import { getSettings } from './api/settings/[pid]';
 import {
+  Basis,
   Fronty,
   Sections,
 } from '../app/components';
+
+const { Meta } = Basis;
 
 const {
   Header,
@@ -31,11 +34,21 @@ type PageProps = {
 
 const Page: NextPage<PageProps> = ({ settings, slides }) => {
   const i18n = useContext(IntContext);
+  const locale = i18n.locale();
 
   return (
     <>
       <Head>
         <title>{`${settings.site.title['ru-RU']} | ${i18n.t('head.title.home')}`}</title>
+        <Meta
+          title={`${settings.site.title['ru-RU']} | ${i18n.t('head.title.home')}`}
+          description={i18n.t('pages.home.description')}
+          locale={locale}
+          image={slides && slides[0].thumbnail}
+          url={new URL('/', settings.site.url).toString()}
+          icon={settings.site.icon}
+          type="website"
+        />
       </Head>
       <Header navigationLinks={settings.navigationLinks} />
       <main>

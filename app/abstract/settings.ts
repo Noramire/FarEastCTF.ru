@@ -10,6 +10,7 @@ type Settings = Partial<{
     title: LocaleString,
     description: LocaleString,
     url: string,
+    icon: string,
   },
   posts: {
     postsPerPage: number,

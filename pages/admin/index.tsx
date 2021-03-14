@@ -25,6 +25,7 @@ const Page: NextPage<PageProps> = ({ settings }) => {
     <>
       <Head>
         <title>{`${settings.site.title['ru-RU']} | Admin Panel`}</title>
+        <meta name="robots" content="noindex" />
       </Head>
       <Admin dataProvider={dataProvider} authProvider={AuthProvider}>
         <Resource name="posts" list={PostList} edit={PostEdit} create={PostCreate} />

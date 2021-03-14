@@ -9,6 +9,7 @@ db.settings.findOne({}, (error, post) => {
         title: { 'ru-RU': 'FarEastCTF', 'en-US': 'FarEastCTF' },
         description: { 'ru-RU': 'FarEastCTF', 'en-US': 'FarEastCTF' },
         url: process.env.NODE_HOST ?? 'http://localhost:3000', // 'http://localhost:3000'
+        icon: '/icon.svg',
       },
       posts: {
         postsPerPage: 10,

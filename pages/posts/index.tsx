@@ -30,6 +30,7 @@ const {
   Linkp,
   Grid,
   Column,
+  Meta,
 } = Basis;
 
 const { MotionInView } = Utils;
@@ -144,6 +145,15 @@ const Page: NextPage<PageProps> = ({ posts, settings }) => {
     <>
       <Head>
         <title>{`${settings.site.title['ru-RU']} | ${i18n.t('head.title.posts')}`}</title>
+        <Meta
+          title={`${settings.site.title['ru-RU']} | ${i18n.t('head.title.posts')}`}
+          description={i18n.t('pages.blog.description')}
+          locale={locale}
+          image={posts[0].thumbnail}
+          url={new URL('posts', settings.site.url).toString()}
+          icon={settings.site.icon}
+          type="website"
+        />
       </Head>
       <Header navigationLinks={settings.navigationLinks} />
       <main>

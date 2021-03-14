@@ -25,6 +25,7 @@ const {
   Container,
   Grid,
   Column,
+  Meta,
 } = Basis;
 
 const { MotionInView } = Utils;
@@ -68,11 +69,19 @@ const Page: NextPage<PageProps> = ({
   const locale = i18n.locale();
 
   const getDate = (date: Date) => `${date.getDate()} ${date.toLocaleString(locale, { month: 'short' })} ${date.getFullYear()}`;
-
   return (
     <>
       <Head>
         <title>{`${settings.site.title['ru-RU']} | ${post.title[locale]}`}</title>
+        <Meta
+          title={`${settings.site.title['ru-RU']} | ${post.title[locale]}`}
+          description={post.description[locale]}
+          locale={locale}
+          image={post.thumbnail}
+          url={new URL(`posts/${post.slug}`, settings.site.url).toString()}
+          icon={settings.site.icon}
+          type="article"
+        />
       </Head>
       <Header navigationLinks={settings.navigationLinks} />
       <main>
@@ -110,49 +119,51 @@ const Page: NextPage<PageProps> = ({
               {getDate(new Date(post.date))}
             </Typography>
           </header>
-          <div
-            css={css`
-              padding-top: 3rem;
-              margin: 0;
-
-              font-size: 18px;
-              line-height: 2rem;
-
-              ul {
+          {post.content && post.content[locale] && (
+            <div
+              css={css`
+                padding-top: 3rem;
                 margin: 0;
-                padding: 1rem 0 calc(1rem + 5px);
-              }
-              
-              hr {
-                border: 1px solid ${colors.mono};
-                margin: 1rem 0 calc(1rem + 5px);
-              }
-              
-              h1, h2, h3, h4, h5, h6 {
-                margin: 0;
-                padding: 1rem 0;
-                font-family: 'RalewayBold';
-              }
-              
-              p {
-                padding: 1rem 0 calc(1rem + 5px);
-                margin: 0;
-              }
-              
-              img {
-                width: 150%;
-                margin-left: -25%;
-              }
 
-              a {
-                color: ${colors.primary};
-              }
-            `}
-            // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{
-              __html: post.content[locale],
-            }}
-          />
+                font-size: 18px;
+                line-height: 2rem;
+
+                ul {
+                  margin: 0;
+                  padding: 1rem 0 calc(1rem + 5px);
+                }
+                
+                hr {
+                  border: 1px solid ${colors.mono};
+                  margin: 1rem 0 calc(1rem + 5px);
+                }
+                
+                h1, h2, h3, h4, h5, h6 {
+                  margin: 0;
+                  padding: 1rem 0;
+                  font-family: 'RalewayBold';
+                }
+                
+                p {
+                  padding: 1rem 0 calc(1rem + 5px);
+                  margin: 0;
+                }
+                
+                img {
+                  width: 150%;
+                  margin-left: -25%;
+                }
+
+                a {
+                  color: ${colors.primary};
+                }
+              `}
+              // eslint-disable-next-line react/no-danger
+              dangerouslySetInnerHTML={{
+                __html: post.content[locale],
+              }}
+            />
+          )}
         </Container>
       </main>
       <Section css={{ padding: '100px 0' }}>

@@ -31,6 +31,7 @@ const {
   Container,
   Grid,
   Column,
+  Meta,
 } = Basis;
 
 const { MotionInView } = Utils;
@@ -60,6 +61,7 @@ const variants = {
 
 const Page: NextPage<PageProps> = ({ settings }) => {
   const i18n = useContext(IntContext);
+  const locale = i18n.locale();
   const router = useRouter();
   const ref = useRef(null);
 
@@ -83,6 +85,15 @@ const Page: NextPage<PageProps> = ({ settings }) => {
     <>
       <Head>
         <title>{`${settings.site.title['ru-RU']} | ${i18n.t('head.title.about_us')}`}</title>
+        <Meta
+          title={`${settings.site.title['ru-RU']} | ${i18n.t('head.title.about_us')}`}
+          description={i18n.t('pages.about.description')}
+          locale={locale}
+          image={settings.about.landingImage.image}
+          url={new URL('/about', settings.site.url).toString()}
+          icon={settings.site.icon}
+          type="website"
+        />
       </Head>
       <Header navigationLinks={settings.navigationLinks} />
       <Title>{i18n.t('pages.about_us.title_page')}</Title>
