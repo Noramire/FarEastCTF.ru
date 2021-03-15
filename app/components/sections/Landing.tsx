@@ -271,6 +271,8 @@ const SectionLanding = ({
                         <Linkp
                           href={social.url}
                           primaryColor={colors.dark}
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
                           {social.title[locale]}
                         </Linkp>
