@@ -40,6 +40,7 @@ type Settings = Partial<{
       image: string,
       url: string,
       main?: boolean,
+      partner?: boolean,
     }[],
     landingImage: {
       image: string,

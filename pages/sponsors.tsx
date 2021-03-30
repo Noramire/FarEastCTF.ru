@@ -99,7 +99,12 @@ const Page: NextPage<PageProps> = ({ settings }) => {
   const locale = i18n.locale();
 
   const mainSponsors = useMemo(() => settings.sponsors.list.filter((sponsor) => sponsor.main), []);
-  const etcSponsors = useMemo(() => settings.sponsors.list.filter((sponsor) => !sponsor.main), []);
+  const partnerSponsors = useMemo(() => settings.sponsors.list.filter((sponsor) => (
+    sponsor.partner
+  )), []);
+  const etcSponsors = useMemo(() => settings.sponsors.list.filter((sponsor) => (
+    !sponsor.main && !sponsor.partner
+  )), []);
 
   return (
     <>
@@ -175,6 +180,47 @@ const Page: NextPage<PageProps> = ({ settings }) => {
                 )
               }
               {mainSponsors.map((sponsor) => (
+                <Column key={sponsor.image}>
+                  <SponsorLink sponsor={sponsor} />
+                </Column>
+              ))}
+            </Grid>
+            <MotionInView
+              variants={variants}
+              startAnimation="visible"
+              initial="initial"
+            >
+              <Typography
+                as="h1"
+                fontSize="40px"
+                fontSizeXl="35px"
+                fontFamily="RalewayBlack"
+              >
+                {i18n.t('pages.sponsors.title_partners')}
+              </Typography>
+            </MotionInView>
+            <MotionInView
+              variants={variants}
+              initial="initial"
+              startAnimation="visible"
+            >
+              <Typography
+                as="p"
+                fontSize="35px"
+                fontSizeXl="25px"
+              >
+                {i18n.t('pages.sponsors.description_partners')}
+              </Typography>
+            </MotionInView>
+            <Grid
+              css={css`
+                margin: 100px auto;
+              `}
+              cols={3}
+              colsXl={2}
+              colsMd={1}
+            >
+              {partnerSponsors.map((sponsor) => (
                 <Column key={sponsor.image}>
                   <SponsorLink sponsor={sponsor} />
                 </Column>

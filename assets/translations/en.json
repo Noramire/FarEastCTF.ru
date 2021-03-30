@@ -41,10 +41,12 @@
       "title": "We are supported by",
       "description": "Rostelecom Solar is our main sponsor, thanks to which we can host computer security competitions.",
       "know_more": "Let's know more",
-      "title_page": "Sponsors",
+      "title_page": "Sponsors and partners",
       "title_sponsors": "We are sponsored by",
+      "title_partners": "Our partners",
       "title_smi": "We are supported in media by",
-      "description_sponsors": "Our competitions could not have taken place without the following sponsors.",
+      "description_sponsors": "We are funded by the following sponsors.",
+      "description_partners": "Our competitions could not have taken place without the following partners.",
       "description_smi": "Thousands of people will know about our CTF competitions through the following organizations."
     },
     "write_us": {

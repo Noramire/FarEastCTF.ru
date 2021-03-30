@@ -60,7 +60,8 @@ const SettingsEdit = (props) => (
           <TextInput source="title.en-US" label="Текст (англ.)" />
           <TextInput source="image" label="Изображение спонсора" />
           <TextInput source="url" label="Ссылка на сайт спонсора" />
-          <BooleanInput source="main" label="Если не отмечено, то спонсор попадает под категорию СМИ" fullWidth />
+          <BooleanInput source="main" label="Если отмечено, то спонсор попадает под категорию Спонсоры" fullWidth />
+          <BooleanInput source="partner" label="Если отмечено, то спонсор попадет под категории Партнеры" fullWidth />
         </SimpleFormIterator>
       </ArrayInput>
 
