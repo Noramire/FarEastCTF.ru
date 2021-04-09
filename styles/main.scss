@@ -9,6 +9,8 @@ $regular-mono: #818181;
 $regular-border: #e6e6e6;
 
 .s-landing-slider {
+  width: 100%;
+
   .s-landing-slider__wrapper {
     height: calc(100% - 80px);
     width: calc(100% - 137px);
