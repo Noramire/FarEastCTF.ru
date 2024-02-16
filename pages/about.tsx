@@ -1,13 +1,11 @@
 import React, { useContext, useEffect, useRef } from 'react';
-import { GetServerSideProps, NextPage } from 'next';
+import { NextPage } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { css, useTheme } from '@emotion/react';
 
 import { Settings } from '../app/abstract/settings';
 import IntContext from '../app/context/Internalization';
-import { MyRequest } from '../app/abstract/request';
-import { getSettings } from './api/settings/[pid]';
 import {
   Fronty,
   Basis,
@@ -15,6 +13,7 @@ import {
   Sections,
 } from '../app/components';
 import { Typography } from '../app/components/basis';
+import { settings } from '../utils/settings';
 
 const {
   Header,
@@ -59,7 +58,7 @@ const variants = {
   },
 };
 
-const Page: NextPage<PageProps> = ({ settings }) => {
+const Page: NextPage<PageProps> = () => {
   const i18n = useContext(IntContext);
   const locale = i18n.locale();
   const router = useRouter();
@@ -277,16 +276,6 @@ const Page: NextPage<PageProps> = ({ settings }) => {
       <Footer navigationLinks={settings.navigationLinks} />
     </>
   );
-};
-
-export const getServerSideProps: GetServerSideProps = async ({ req }) => {
-  const settings = await getSettings(req as MyRequest);
-
-  const props: PageProps = {
-    settings,
-  };
-
-  return ({ props });
 };
 
 export default Page;
